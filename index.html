@@ -1,1 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos que mereciam o Game Awards</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a class="logo" href="#inicio">🏆 Game Awards <span>Opinião</span></a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">☰</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#jogos">Jogos</a></li>
+                <li><a href="#votacao">Votação</a></li>
+                <li><a href="#referencias">Referências</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <p class="hero-tag">Será que o jogo certo ganhou?</p>
+            <h1>Jogos que mereciam o <span class="gold">Game Awards</span></h1>
+            <p class="hero-text">
+                Uma seleção de jogos que, na minha opinião, também poderiam
+                ter conquistado o prêmio de Jogo do Ano.
+            </p>
+            <a class="btn" href="#jogos">Ver os jogos</a>
+            <a class="btn btn-outline" href="#votacao">Dar minha opinião</a>
+        </section>
+
+        <section class="section" id="jogos">
+            <h2 class="section-title">🎮 Jogos que poderiam ter vencido</h2>
+
+            <div class="search-bar">
+                <input type="search" id="search" placeholder="Pesquisar jogo...">
+                <select id="year-filter">
+                    <option value="">Todos os anos</option>
+                </select>
+            </div>
+            <p class="no-results" id="no-results" hidden>Nenhum jogo encontrado.</p>
+
+            <div class="game-grid" id="game-grid">
+
+                <article class="game-card" data-year="2013">
+                    <span class="year-badge">2013</span>
+                    <h3 class="game-title">Grand Theft Auto V</h3>
+                    <p class="game-description">
+                        Grand Theft Auto V foi um fenômeno. O jogo trouxe um dos
+                        maiores mundos abertos da época, três protagonistas e uma
+                        enorme quantidade de conteúdo.
+                    </p>
+                    <button class="btn-more">Ler mais</button>
+                    <div class="game-more" hidden>
+                        <p>
+                            Mesmo com The Last of Us recebendo o prêmio, GTA V marcou
+                            a indústria e continuou relevante durante muitos anos,
+                            principalmente graças ao GTA Online.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="game-card" data-year="2014">
+                    <span class="year-badge">2014</span>
+                    <h3 class="game-title">Alien: Isolation</h3>
+                    <p class="game-description">
+                        Alien: Isolation foi um dos jogos de terror mais marcantes
+                        de sua geração. O jogo conseguiu criar uma sensação
+                        constante de tensão ao colocar o jogador contra um Alien
+                        extremamente imprevisível.
+                    </p>
+                    <button class="btn-more">Ler mais</button>
+                    <div class="game-more" hidden>
+                        <p>
+                            Enquanto Dragon Age: Inquisition levou o prêmio,
+                            Alien: Isolation poderia ter vencido pela sua atmosfera,
+                            inteligência artificial e experiência de terror.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="game-card" data-year="2016">
+                    <span class="year-badge">2016</span>
+                    <h3 class="game-title">DOOM</h3>
+                    <p class="game-description">
+                        DOOM revitalizou uma das franquias mais importantes dos
+                        jogos de tiro. O jogo abandonou a ideia de ficar escondido
+                        esperando os inimigos e incentivou o jogador a partir para
+                        cima, criando combates extremamente rápidos e intensos.
+                    </p>
+                    <button class="btn-more">Ler mais</button>
+                    <div class="game-more" hidden>
+                        <p>
+                            Overwatch venceu o prêmio, mas DOOM poderia ter levado
+                            o GOTY pela qualidade e diversão de sua campanha.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="game-card" data-year="2018">
+                    <span class="year-badge">2018</span>
+                    <h3 class="game-title">Red Dead Redemption 2</h3>
+                    <p class="game-description">
+                        Red Dead Redemption 2 é um dos casos mais discutidos. O jogo
+                        apresentou um mundo aberto extremamente detalhado, uma
+                        história longa e personagens muito bem desenvolvidos,
+                        principalmente Arthur Morgan.
+                    </p>
+                    <button class="btn-more">Ler mais</button>
+                    <div class="game-more" hidden>
+                        <p>
+                            Mesmo com God of War levando o GOTY, Red Dead Redemption 2
+                            poderia ter recebido o prêmio pelo nível de detalhes,
+                            narrativa e imersão.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="game-card" data-year="2019">
+                    <span class="year-badge">2019</span>
+                    <h3 class="game-title">Resident Evil 2</h3>
+                    <p class="game-description">
+                        Resident Evil 2 conseguiu transformar um clássico de 1998
+                        em uma experiência moderna sem perder a essência original.
+                        Os gráficos, o design dos ambientes, os inimigos e a
+                        atmosfera fizeram do remake um dos grandes jogos de terror
+                        daquele ano.
+                    </p>
+                    <button class="btn-more">Ler mais</button>
+                    <div class="game-more" hidden>
+                        <p>
+                            Sekiro: Shadows Die Twice ganhou o GOTY, mas Resident Evil 2
+                            continua sendo lembrado como um dos grandes destaques de 2019.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="game-card" data-year="2020">
+                    <span class="year-badge">2020</span>
+                    <h3 class="game-title">Ghost of Tsushima</h3>
+                    <p class="game-description">
+                        Ghost of Tsushima apresentou um enorme mundo aberto
+                        inspirado no Japão feudal, com uma direção artística
+                        impressionante e combates de espada muito bem trabalhados.
+                    </p>
+                    <button class="btn-more">Ler mais</button>
+                    <div class="game-more" hidden>
+                        <p>
+                            The Last of Us Part II ganhou o prêmio, mas Ghost of Tsushima
+                            conquistou muitos jogadores com sua ambientação, exploração
+                            e combate.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="game-card" data-year="2021">
+                    <span class="year-badge">2021</span>
+                    <h3 class="game-title">Resident Evil Village</h3>
+                    <p class="game-description">
+                        Resident Evil Village conseguiu misturar terror, ação e
+                        exploração de uma maneira diferente dos jogos anteriores
+                        da série. A variedade de ambientes, inimigos e chefes fez
+                        com que a campanha tivesse momentos bastante diferentes
+                        entre si.
+                    </p>
+                    <button class="btn-more">Ler mais</button>
+                    <div class="game-more" hidden>
+                        <p>
+                            It Takes Two venceu o GOTY, mas Village poderia ter levado
+                            o prêmio pela qualidade de sua produção.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="game-card" data-year="2024">
+                    <span class="year-badge">2024</span>
+                    <h3 class="game-title">Black Myth: Wukong</h3>
+                    <p class="game-description">
+                        Black Myth: Wukong chamou muita atenção pelos seus gráficos,
+                        combates e inspiração na mitologia chinesa. O jogo apresentou
+                        batalhas contra diversos chefes e uma experiência de ação que
+                        conquistou uma enorme quantidade de jogadores.
+                    </p>
+                    <button class="btn-more">Ler mais</button>
+                    <div class="game-more" hidden>
+                        <p>
+                            Astro Bot recebeu o GOTY, mas Wukong poderia ter sido
+                            uma escolha diferente para o prêmio.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="game-card" data-year="2025">
+                    <span class="year-badge">2025</span>
+                    <h3 class="game-title">Death Stranding 2: On the Beach</h3>
+                    <p class="game-description">
+                        Death Stranding 2: On the Beach continuou a proposta
+                        criada por Hideo Kojima e trouxe uma nova aventura
+                        com Sam Porter Bridges. O jogo se destacou pela direção,
+                        narrativa, personagens e por tentar fazer algo diferente
+                        dentro da indústria.
+                    </p>
+                    <button class="btn-more">Ler mais</button>
+                    <div class="game-more" hidden>
+                        <p>
+                            Mesmo com Clair Obscur: Expedition 33 recebendo o prêmio,
+                            Death Stranding 2 poderia ser considerado um dos grandes
+                            candidatos daquele ano.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="section vote-section" id="votacao">
+            <h2 class="section-title">🗳️ Qual jogo merece ganhar o próximo Game Awards?</h2>
+            <p class="section-subtitle">Escolha um candidato e vote. Você pode votar uma vez por visita.</p>
+
+            <p class="vote-message" id="vote-message" role="status" hidden></p>
+
+            <div class="vote-grid" id="vote-grid"></div>
+
+            <h3 class="ranking-title">🥇 Ranking de votos</h3>
+            <ol class="ranking" id="ranking"></ol>
+            <p class="vote-total">Total de votos: <strong id="vote-total">0</strong></p>
+            <button class="btn btn-outline" id="reset-votes">Zerar votos</button>
+        </section>
+
+        <section class="section" id="referencias">
+            <h2 class="section-title">📚 Referências</h2>
+            <p>Algumas informações utilizadas para a criação do conteúdo:</p>
+            <a class="btn btn-outline" href="https://www.tecmundo.com.br/jogos/261168"
+               target="_blank" rel="noopener">Acessar referência no TecMundo</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 - Jogos que mereciam o Game Awards</p>
+    </footer>
+
+</body>
+  </html>
 
