@@ -1,1 +1,152 @@
+:root {
+    --bg: #0D0D0F;
+    --gold: #D4AF37;
+    --text: #F5F5F5;
+    --text-2: #A6A6A6;
+    --card: #19191D;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+}
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+
+/* ===== Header / Navbar ===== */
+.header {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(13, 13, 15, 0.95);
+    border-bottom: 1px solid var(--gold);
+}
+.navbar {
+    max-width: 1100px; margin: 0 auto; padding: 14px 20px;
+    display: flex; justify-content: space-between; align-items: center;
+}
+.logo { font-weight: bold; font-size: 1.2rem; }
+.logo span { color: var(--gold); }
+.nav-links { display: flex; gap: 24px; }
+.nav-links a { color: var(--text-2); transition: color .3s; }
+.nav-links a:hover { color: var(--gold); }
+.menu-toggle {
+    display: none; background: none; border: 1px solid var(--gold);
+    color: var(--gold); font-size: 1.4rem; padding: 2px 10px; cursor: pointer;
+}
+
+/* ===== Hero ===== */
+.hero {
+    text-align: center; padding: 100px 20px;
+    background: radial-gradient(circle at top, #2a2308 0%, var(--bg) 65%);
+}
+.hero-tag { color: var(--gold); letter-spacing: 3px; text-transform: uppercase; font-size: .85rem; }
+.hero h1 { font-size: clamp(2rem, 6vw, 3.6rem); margin: 12px 0; }
+.gold { color: var(--gold); }
+.hero-text { max-width: 600px; margin: 0 auto 30px; color: var(--text-2); }
+
+/* ===== Botões ===== */
+.btn {
+    display: inline-block; padding: 12px 26px; margin: 6px;
+    background: var(--gold); color: #000; font-weight: bold;
+    border: 2px solid var(--gold); border-radius: 6px; cursor: pointer;
+    transition: transform .2s, box-shadow .3s;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 0 18px rgba(212, 175, 55, .5); }
+.btn-outline { background: transparent; color: var(--gold); }
+
+/* ===== Seções ===== */
+.section { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+.section-title { color: var(--gold); margin-bottom: 10px; font-size: 1.8rem; }
+.section-subtitle { color: var(--text-2); margin-bottom: 24px; }
+
+/* ===== Busca ===== */
+.search-bar { display: flex; gap: 12px; margin: 20px 0; flex-wrap: wrap; }
+.search-bar input, .search-bar select {
+    padding: 10px 14px; background: var(--card); color: var(--text);
+    border: 1px solid #333; border-radius: 6px; font-size: 1rem;
+}
+.search-bar input { flex: 1; min-width: 200px; }
+.search-bar input:focus, .search-bar select:focus { outline: none; border-color: var(--gold); }
+.no-results { color: var(--text-2); }
+
+/* ===== Cards de jogos ===== */
+.game-grid {
+    display: grid; gap: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.game-card {
+    background: var(--card); padding: 24px; border-radius: 10px;
+    border: 1px solid #2a2a30; border-top: 3px solid var(--gold);
+    transition: transform .3s, box-shadow .3s;
+}
+.game-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(212, 175, 55, .2); }
+.year-badge {
+    display: inline-block; background: var(--gold); color: #000;
+    font-weight: bold; padding: 2px 12px; border-radius: 20px; font-size: .85rem;
+}
+.game-title { margin: 12px 0 8px; font-size: 1.3rem; }
+.game-description, .game-more { color: var(--text-2); }
+.game-more { margin-top: 12px; padding-top: 12px; border-top: 1px dashed #333; }
+.btn-more {
+    margin-top: 14px; background: none; border: none;
+    color: var(--gold); cursor: pointer; font-size: .95rem;
+}
+.btn-more:hover { text-decoration: underline; }
+[hidden] { display: none !important; }
+
+/* ===== Votação ===== */
+.vote-section { border-top: 1px solid #222; }
+.vote-grid {
+    display: grid; gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+.vote-card {
+    background: var(--card); padding: 20px; border-radius: 10px;
+    border: 1px solid #2a2a30; text-align: center;
+    transition: transform .3s, border-color .3s;
+}
+.vote-card:hover { transform: translateY(-4px); border-color: var(--gold); }
+.vote-card h4 { margin-bottom: 10px; }
+.vote-count { color: var(--gold); font-size: 1.4rem; font-weight: bold; }
+.vote-percent { color: var(--text-2); font-size: .9rem; margin-bottom: 10px; }
+.vote-message {
+    background: rgba(212, 175, 55, .12); border: 1px solid var(--gold);
+    padding: 12px; border-radius: 6px; margin-bottom: 20px; text-align: center;
+}
+
+/* ===== Ranking ===== */
+.ranking-title { margin: 40px 0 16px; }
+.ranking-item { margin-bottom: 14px; }
+.ranking-info { display: flex; justify-content: space-between; margin-bottom: 4px; }
+.ranking-bar { height: 10px; background: var(--card); border-radius: 6px; overflow: hidden; }
+.ranking-fill {
+    height: 100%; width: 0; background: linear-gradient(90deg, #8a6d12, var(--gold));
+    transition: width .6s ease;
+}
+.vote-total { margin: 20px 0 10px; color: var(--text-2); }
+
+/* ===== Footer ===== */
+.footer {
+    text-align: center; padding: 30px 20px; color: var(--text-2);
+    border-top: 1px solid var(--gold); background: #0a0a0c;
+}
+
+/* ===== Responsivo (celular) ===== */
+@media (max-width: 700px) {
+    .menu-toggle { display: block; }
+    .nav-links {
+        display: none; position: absolute; top: 100%; left: 0; right: 0;
+        flex-direction: column; gap: 0; background: var(--bg);
+        border-bottom: 1px solid var(--gold);
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a { display: block; padding: 14px 20px; }
+    .hero { padding: 70px 20px; }
+    .game-grid, .vote-grid { grid-template-columns: 1fr; }
+    .btn { width: 100%; text-align: center; }
+    .btn-more { width: auto; }
+  }
 
