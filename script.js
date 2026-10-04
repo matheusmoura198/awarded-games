@@ -1,3 +1,4 @@
+// ===== 1. MENU DO CELULAR =====
 const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
 
@@ -51,10 +52,12 @@ yearFilter.addEventListener("change", filterGames);
 // ===== 4. SISTEMA DE VOTAÇÃO =====
 // Candidatos (edite aqui). "votes" é o valor inicial (dados fictícios).
 const candidates = [
-    { id: "game1", name: "Candidato 1", votes: 12 },
-    { id: "game2", name: "Candidato 2", votes: 9 },
-    { id: "game3", name: "Candidato 3", votes: 7 },
-    { id: "game4", name: "Candidato 4", votes: 4 }
+    { id: "re-requiem", name: "Resident Evil Requiem", note: "Capcom • Terror e ação", votes: 14 },
+    { id: "gta-vi", name: "Grand Theft Auto VI", note: "Rockstar • Lança em 19/11", votes: 11 },
+    { id: "crimson-desert", name: "Crimson Desert", note: "Pearl Abyss • Mundo aberto", votes: 8 },
+    { id: "forza-horizon-6", name: "Forza Horizon 6", note: "Playground • Corrida no Japão", votes: 7 },
+    { id: "wolverine", name: "Marvel's Wolverine", note: "Insomniac • Exclusivo PS5", votes: 6 },
+    { id: "007-first-light", name: "007 First Light", note: "IO Interactive • Ação e espionagem", votes: 5 }
 ];
 
 const STORAGE_KEY = "gameAwardsVotes";
@@ -87,6 +90,7 @@ function renderVoting() {
         card.className = "vote-card";
         card.innerHTML = `
             <h4>${c.name}</h4>
+            <p class="vote-percent">${c.note}</p>
             <p class="vote-count">${c.votes} votos</p>
             <p class="vote-percent">${percent}%</p>
             <button class="btn" data-id="${c.id}">Votar</button>`;
@@ -141,4 +145,3 @@ function showMessage(text) {
 }
 
 renderVoting();
-              
